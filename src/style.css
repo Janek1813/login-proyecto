@@ -1,0 +1,257 @@
+
+:root {
+  /* Principal (antes morado) -> verde azulado */
+  --morado: #2dd4bf;
+  --morado-oscuro: #14b8a6;
+  --morado-claro: #134e4a;
+
+  /* Secundario (antes rosa) -> naranja */
+  --rosa: #fb923c;
+  --rosa-oscuro: #ea580c;
+  --rosa-claro: #431f0c;
+
+  /* Terciario (antes azul) -> celeste */
+  --azul: #38bdf8;
+  --azul-oscuro: #0284c7;
+  --azul-claro: #0c3350;
+
+  --amarillo: #fde68a;
+
+  --fondo: #0b1220;
+  --superficie: #131c2e;
+  --borde: #243049;
+  --texto: #e2e8f0;
+  --texto-suave: #94a3b8;
+  --blanco: #ffffff;
+}
+
+/* Fondo general */
+body {
+  background:
+    radial-gradient(circle at 15% 10%, rgba(45, 212, 191, .12), transparent 40%),
+    radial-gradient(circle at 85% 90%, rgba(251, 146, 60, .10), transparent 40%),
+    var(--fondo);
+  background-attachment: fixed;
+  color: var(--texto);
+  min-height: 100vh;
+}
+
+.text-muted {
+  color: var(--texto-suave) !important;
+}
+
+/* Botones */
+.btn-morado {
+  background-color: var(--morado);
+  border-color: var(--morado);
+  color: #042f2e;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.btn-morado:hover,
+.btn-morado:focus {
+  background-color: var(--morado-oscuro);
+  border-color: var(--morado-oscuro);
+  color: #042f2e;
+  box-shadow: 0 0 14px rgba(45, 212, 191, .45);
+}
+
+.btn-outline-morado {
+  border-color: var(--morado);
+  color: var(--morado);
+  transition: all .2s ease;
+}
+
+.btn-outline-morado:hover {
+  background-color: var(--morado);
+  color: #042f2e;
+}
+
+/* Botones adicionales */
+.btn-rosa {
+  background-color: var(--rosa);
+  border-color: var(--rosa);
+  color: #431407;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.btn-rosa:hover {
+  background-color: var(--rosa-oscuro);
+  border-color: var(--rosa-oscuro);
+  color: #fff;
+  box-shadow: 0 0 14px rgba(251, 146, 60, .4);
+}
+
+.btn-azul {
+  background-color: var(--azul);
+  border-color: var(--azul);
+  color: #082f49;
+  font-weight: 600;
+  transition: all .2s ease;
+}
+
+.btn-azul:hover {
+  background-color: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  color: #fff;
+}
+
+/* Enlaces */
+a {
+  color: var(--morado);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--rosa);
+}
+
+/* Navbar */
+.navbar-morado {
+  background: rgba(19, 28, 46, .85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--borde);
+}
+
+.navbar-morado .nav-link,
+.navbar-morado .navbar-brand {
+  color: var(--texto);
+  transition: color .2s ease;
+}
+
+.navbar-morado .nav-link:hover,
+.navbar-morado .nav-link.active {
+  color: var(--morado);
+}
+
+/* Tarjetas */
+.tarjeta {
+  background: var(--superficie);
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+  color: var(--texto);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.tarjeta:hover {
+  transform: translateY(-3px);
+  border-color: var(--morado);
+  box-shadow: 0 12px 30px rgba(45, 212, 191, .15);
+}
+
+/* Formularios */
+.form-control,
+.form-select {
+  background-color: #0f1729;
+  border: 1px solid var(--borde);
+  border-radius: 8px;
+  color: var(--texto);
+}
+
+.form-control::placeholder {
+  color: #64748b;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: #0f1729;
+  color: var(--texto);
+  border-color: var(--morado);
+  box-shadow: 0 0 0 .2rem rgba(45, 212, 191, .2);
+}
+
+.form-label {
+  color: var(--texto-suave);
+}
+
+/* Iconos circulares */
+.icono-circulo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--morado-claro);
+  color: var(--morado);
+  border: 1px solid rgba(45, 212, 191, .35);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+/* Hero de inicio */
+.hero {
+  background: linear-gradient(135deg, #0f766e, #0369a1 55%, #c2410c);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(20, 184, 166, .2);
+}
+
+/* Personajes */
+.personaje-card {
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--superficie);
+  color: var(--texto);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.personaje-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .5);
+}
+
+.personaje-card img {
+  border-radius: 12px 12px 0 0;
+}
+
+/* Etiquetas */
+.badge-morado {
+  background-color: var(--morado-claro);
+  color: var(--morado);
+}
+
+.badge-rosa {
+  background-color: var(--rosa-claro);
+  color: var(--rosa);
+}
+
+.badge-azul {
+  background-color: var(--azul-claro);
+  color: var(--azul);
+}
+
+/* Pantalla de error */
+.error-codigo {
+  font-size: 6rem;
+  font-weight: 800;
+  color: var(--morado);
+  text-shadow: 0 0 24px rgba(45, 212, 191, .45);
+  line-height: 1;
+}
+
+/* Títulos */
+h1, h2, h3, h4 {
+  color: #f1f5f9;
+}
+
+/* Tablas */
+.table {
+  --bs-table-bg: var(--superficie);
+  --bs-table-color: var(--texto);
+  --bs-table-border-color: var(--borde);
+  --bs-table-striped-bg: #17233a;
+  --bs-table-striped-color: var(--texto);
+  --bs-table-hover-bg: #1b2a45;
+  --bs-table-hover-color: var(--texto);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table thead {
+  background-color: var(--morado-claro);
+  color: var(--morado);
+}
