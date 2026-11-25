@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout.jsx';
 import Home from './pages/Home.jsx';
 import Login from './pages/Login.jsx';
@@ -11,7 +11,7 @@ import RutasPrivadas from './routes/RutasPrivadas.jsx';
 import RutasPublicas from './routes/RutasPublicas.jsx';
 
 const App = () => (
-  <BrowserRouter>
+  <HashRouter>
     <Routes>
       <Route element={<Layout />}>
         <Route path="/" element={<RutasPrivadas><Home /></RutasPrivadas>} />
@@ -23,7 +23,7 @@ const App = () => (
         <Route path="*" element={<Error />} />
       </Route>
     </Routes>
-  </BrowserRouter>
+  </HashRouter>
 );
 
 export default App;
